@@ -61,6 +61,7 @@ function addBookToLibrary() {
 
     //buttons
     let readBtn = document.createElement("button");
+    readBtn.textContent = "Read";
     readBtn.classList.add("readBtn");
     bookCard.appendChild(readBtn);
 
@@ -73,14 +74,19 @@ function addBookToLibrary() {
       readBtn.textContent = "Not Read";
       readBtn.classList.add("notRead");
     } else {
-      readBtn.textContent = "Read";
       readBtn.classList.remove("notRead");
     }
     cardsOfBooks.appendChild(bookCard);
     bookCard.classList.add("active");
   
     readBtn.addEventListener("click", function (e) {
-      readBtn.classList.toggle("notRead")
+      if(readBtn.classList.contains('notRead')) {
+        readBtn.classList.remove("notRead");
+        readBtn.textContent = "Read";
+      } else {
+        readBtn.textContent = "Not Read";
+        readBtn.classList.add("notRead");
+      }
     });
 
     removeBtn.addEventListener("click", function (e) {
