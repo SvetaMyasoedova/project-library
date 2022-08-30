@@ -1,3 +1,5 @@
+
+/* */
 body {
   background: url("library.jpg") no-repeat;
   background-size: cover;
@@ -170,7 +172,7 @@ label {
 }
 
 .bookCard div {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   font-size: 25px;
   letter-spacing: 2px;
   color: rgba(231, 76, 60, 0.8);
@@ -180,6 +182,9 @@ label {
 .cardsOfBooks {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .readBtn {
